@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InFromTopComponent } from './in-from-top/in-from-top.component';
+import {InFromTopComponent} from './in-from-top/in-from-top.component';
 
 @NgModule({
   declarations: [InFromTopComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [InFromTopComponent]
 })
 export class InFromTopModule { }
