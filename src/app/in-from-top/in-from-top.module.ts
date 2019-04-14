@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InFromTopComponent } from './in-from-top/in-from-top.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [InFromTopComponent],
   imports: [
     CommonModule
   ]
