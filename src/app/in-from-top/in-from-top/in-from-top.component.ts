@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { animate, trigger, style, transition, state } from '@angular/animations';
 
 @Component({
@@ -23,18 +23,15 @@ import { animate, trigger, style, transition, state } from '@angular/animations'
 })
 export class InFromTopComponent implements OnInit {
 
-  @Input('[@inFromTop]') inFromTop;
-  theCode: AnimationBody;
+  @Input() inputFromTop: string;
   test = true;
-  body = 'Hello hello hello';
+  body: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.body = this.inputFromTop;
   }
 
 }
 
-export interface AnimationBody {
-  body: string;
-}
