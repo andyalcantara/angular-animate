@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { TestDirectivesService } from './test-directives.service';
 
 @Component({
@@ -6,17 +6,12 @@ import { TestDirectivesService } from './test-directives.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'angular-animate';
+  value: boolean;
 
   constructor(
     private testDirectivesService: TestDirectivesService
-  ) { }
-
-  ngOnInit(): void {
-    this.testDirectivesService.fire.subscribe(result => {
-      console.log(result);
-    });
+  ) {
   }
-
 }

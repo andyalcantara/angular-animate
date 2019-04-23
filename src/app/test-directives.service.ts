@@ -6,7 +6,11 @@ import { Subject } from 'rxjs';
 })
 export class TestDirectivesService {
 
-  fire = new Subject<string>();
+  fire = false;
 
   constructor() { }
+
+  setPropertyToTrue() {
+    this.fire = true;
+  }
 }

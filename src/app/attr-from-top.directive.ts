@@ -1,11 +1,11 @@
-import {Directive, ElementRef, Injectable, OnInit, Renderer2} from '@angular/core';
-import {TestDirectivesService} from './test-directives.service';
+import {Directive, ElementRef, Renderer2, HostListener, Injectable} from '@angular/core';
+import { TestDirectivesService } from './test-directives.service';
 
+@Injectable()
 @Directive({
-  selector: '[appAttrFromTop]',
-  providers: [TestDirectivesService]
+  selector: '[appAttrFromTop]'
 })
-export class AttrFromTopDirective implements OnInit {
+export class AttrFromTopDirective {
 
   constructor(
     private renderer2: Renderer2,
@@ -15,12 +15,9 @@ export class AttrFromTopDirective implements OnInit {
     renderer2.setStyle(this.el.nativeElement, 'background-color', 'yellow');
   }
 
-  render() {
-    this.testDirectivesService.fire.next('animate');
-  }
-
-  ngOnInit() {
-    this.render();
+  @HostListener('click') onMouseClick() {
+    this.testDirectivesService.setPropertyToTrue();
+    console.log('This works');
   }
 
 }

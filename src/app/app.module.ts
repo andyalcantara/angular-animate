@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import { AttrFromTopDirective } from './attr-from-top.directive';
+import {TestDirectivesService} from './test-directives.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AttrFromTopDirective } from './attr-from-top.directive';
     BrowserAnimationsModule,
     InFromTopModule
   ],
-  providers: [],
+  providers: [TestDirectivesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
