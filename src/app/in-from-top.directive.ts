@@ -5,7 +5,7 @@ import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
 })
 export class InFromTopDirective {
 
-  hasView = true;
+  private hasView = false;
 
   constructor(
     private templateRef: TemplateRef<any>,
