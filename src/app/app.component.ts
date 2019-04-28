@@ -7,7 +7,7 @@ import { TestDirectivesService } from './test-directives.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-animate';
+  title = 7;
   value: boolean;
 
   constructor(

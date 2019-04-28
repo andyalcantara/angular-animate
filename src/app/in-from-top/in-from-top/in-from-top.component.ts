@@ -32,15 +32,14 @@ export class InFromTopComponent implements OnInit {
     private testDirectivesService: TestDirectivesService,
     private render: Renderer2
     ) {
-    this.render.listen('document', 'click', () => {
-      this.test = true;
-      console.log(this.test, 'This is test');
-      console.log('Trying this');
-    });
   }
 
   ngOnInit() {
     this.body = this.inputFromTop;
+  }
+
+  showResult() {
+    console.log(this.testDirectivesService.fire);
   }
 
 }
