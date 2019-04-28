@@ -1,6 +1,6 @@
 import {Directive, ElementRef, Renderer2, HostListener, Injectable} from '@angular/core';
 import { TestDirectivesService } from './test-directives.service';
-import {AnimationBuilder} from '@angular/animations';
+import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
@@ -10,6 +10,7 @@ import {AnimationBuilder} from '@angular/animations';
 export class AttrFromTopDirective {
 
   constructor(
+    private animationBuilder: AnimationBuilder,
     private renderer2: Renderer2,
     private el: ElementRef,
     private testDirectivesService: TestDirectivesService
@@ -21,7 +22,15 @@ export class AttrFromTopDirective {
   }
 
   @HostListener('click') onMouseClick() {
-    this.testDirectivesService.setPropertyToTrue();
+    const directiveAnimation = this.animationBuilder.build([
+      style({
+        backgroundColor: 'black',
+      }),
+      animate(500, style({backgroundColor: 'yellow'}))
+    ]);
+
+    const player = directiveAnimation.create(this.el.nativeElement);
+    player.play();
   }
 
 }
