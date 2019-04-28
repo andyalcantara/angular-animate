@@ -15,10 +15,7 @@ export class AttrFromTopDirective {
     private el: ElementRef,
     private testDirectivesService: TestDirectivesService
     ) {
-      renderer2.setStyle(this.el.nativeElement, 'background-color', 'yellow');
-      renderer2.listen(this.el.nativeElement, 'click', () => {
-        testDirectivesService.setPropertyToTrue();
-      });
+      // renderer2.setStyle(this.el.nativeElement, 'background-color', 'yellow');
   }
 
   @HostListener('click') onMouseClick() {
@@ -26,7 +23,7 @@ export class AttrFromTopDirective {
       style({
         backgroundColor: 'black',
       }),
-      animate(500, style({backgroundColor: 'yellow'}))
+      animate(500, style({backgroundColor: 'white'}))
     ]);
 
     const player = directiveAnimation.create(this.el.nativeElement);

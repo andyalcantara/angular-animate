@@ -8,11 +8,13 @@ import { InFromTopModule } from './in-from-top/in-from-top.module';
 import { AttrFromTopDirective } from './attr-from-top.directive';
 import {TestDirectivesService} from './test-directives.service';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
+import { RotateDirectiveDirective } from './directives/rotate-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AttrFromTopDirective
+    AttrFromTopDirective,
+    RotateDirectiveDirective
   ],
   imports: [
     BrowserModule,
