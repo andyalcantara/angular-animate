@@ -1,12 +1,13 @@
-import {Directive, Injectable, ElementRef, Renderer2, HostListener} from '@angular/core';
+import {Directive, Injectable, ElementRef, Renderer2, HostListener, Input} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
-  selector: '[appRotateDirective]'
+  selector: '[rotateAtClick]'
 })
 export class RotateDirectiveDirective {
 
+  @Input() mouseEvent: EventListener;
   deg = 0;
 
   constructor(
@@ -15,7 +16,7 @@ export class RotateDirectiveDirective {
     private renderer: Renderer2
   ) { }
 
-  @HostListener('click') onMouseClick() {
+  @HostListener('click', ['$event']) onMouseClick() {
     if (this.deg === 0) {
       this.deg = 180;
     } else if (this.deg > 0) {

@@ -9,12 +9,14 @@ import { AttrFromTopDirective } from './attr-from-top.directive';
 import {TestDirectivesService} from './test-directives.service';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { RotateDirectiveDirective } from './directives/rotate-directive.directive';
+import { ShakeAtHoverDirective } from './directives/shake-at-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AttrFromTopDirective,
-    RotateDirectiveDirective
+    RotateDirectiveDirective,
+    ShakeAtHoverDirective
   ],
   imports: [
     BrowserModule,
