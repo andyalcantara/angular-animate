@@ -1,6 +1,5 @@
 import {Component, Input, OnInit, Renderer2} from '@angular/core';
 import { animate, trigger, style, transition, state } from '@angular/animations';
-import {TestDirectivesService} from '../../test-directives.service';
 
 @Component({
   selector: 'app-in-from-top',
@@ -29,17 +28,12 @@ export class InFromTopComponent implements OnInit {
   body: string;
 
   constructor(
-    private testDirectivesService: TestDirectivesService,
     private render: Renderer2
     ) {
   }
 
   ngOnInit() {
     this.body = this.inputFromTop;
-  }
-
-  showResult() {
-    console.log(this.testDirectivesService.fire);
   }
 
 }

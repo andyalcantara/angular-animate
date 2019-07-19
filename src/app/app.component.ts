@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import { TestDirectivesService } from './test-directives.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,6 @@ export class AppComponent {
   value: boolean;
 
   constructor(
-    private testDirectivesService: TestDirectivesService
   ) {
   }
 }

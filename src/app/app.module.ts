@@ -5,18 +5,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { InFromTopModule } from './in-from-top/in-from-top.module';
-import { AttrFromTopDirective } from './attr-from-top.directive';
-import {TestDirectivesService} from './test-directives.service';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { RotateDirectiveDirective } from './directives/rotate-directive.directive';
 import { ShakeAtHoverDirective } from './directives/shake-at-hover.directive';
+import { BounceDirective } from './directives/bounce.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AttrFromTopDirective,
     RotateDirectiveDirective,
-    ShakeAtHoverDirective
+    ShakeAtHoverDirective,
+    BounceDirective
   ],
   imports: [
     BrowserModule,
@@ -24,7 +23,7 @@ import { ShakeAtHoverDirective } from './directives/shake-at-hover.directive';
     InFromTopModule,
     InFromBottomModule
   ],
-  providers: [TestDirectivesService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
