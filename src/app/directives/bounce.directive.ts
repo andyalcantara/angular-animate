@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Injectable, HostListener } from '@angular/core';
+import {Directive, ElementRef, Injectable, HostListener, Input} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
@@ -7,28 +7,32 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class BounceDirective {
 
+  @Input() atOnInit = false;
+
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
   ) {
 
-    const directiveAnimation = animationBuilder.build([
-      animate('50ms', style({
-        transform: 'translateY(-20px)'
-      })),
-      animate('200ms ease-in', style({
-        transform: 'translateY(0px)'
-      })),
-      animate('50ms', style({
-        transform: 'translateY(-20px)'
-      })),
-      animate('200ms ease-in', style({
-        transform: 'translateY(0px)'
-      }))
-    ]);
+    if (this.atOnInit === true) {
+      const directiveAnimation = animationBuilder.build([
+        animate('50ms', style({
+          transform: 'translateY(-20px)'
+        })),
+        animate('200ms ease-in', style({
+          transform: 'translateY(0px)'
+        })),
+        animate('50ms', style({
+          transform: 'translateY(-20px)'
+        })),
+        animate('200ms ease-in', style({
+          transform: 'translateY(0px)'
+        }))
+      ]);
 
-    const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+      const player = directiveAnimation.create(this.element.nativeElement);
+      player.play();
+    }
 
   }
 
@@ -37,13 +41,13 @@ export class BounceDirective {
       animate('50ms ease-in', style({
         transform: 'translateY(0px)'
       })),
-      animate('200ms', style({
+      animate('300ms ease-out', style({
         transform: 'translateY(-40px)'
       })),
       animate('50ms ease-in', style({
         transform: 'translateY(0px)'
       })),
-      animate('200ms', style({
+      animate('200ms ease-out', style({
         transform: 'translateY(-20px)'
       })),
       animate('100ms ease-in', style({

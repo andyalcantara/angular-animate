@@ -9,13 +9,15 @@ import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { RotateDirectiveDirective } from './directives/rotate-directive.directive';
 import { ShakeAtHoverDirective } from './directives/shake-at-hover.directive';
 import { BounceDirective } from './directives/bounce.directive';
+import { FlashDirective } from './directives/flash.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RotateDirectiveDirective,
     ShakeAtHoverDirective,
-    BounceDirective
+    BounceDirective,
+    FlashDirective
   ],
   imports: [
     BrowserModule,
