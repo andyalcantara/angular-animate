@@ -11,6 +11,7 @@ import { ShakeAtHoverDirective } from './directives/shake-at-hover.directive';
 import { BounceDirective } from './directives/bounce.directive';
 import { FlashDirective } from './directives/flash.directive';
 import { PulseDirective } from './directive/pulse.directive';
+import { RubberDirective } from './directives/rubber.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PulseDirective } from './directive/pulse.directive';
     ShakeAtHoverDirective,
     BounceDirective,
     FlashDirective,
-    PulseDirective
+    PulseDirective,
+    RubberDirective
   ],
   imports: [
     BrowserModule,
