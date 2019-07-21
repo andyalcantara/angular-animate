@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 7;
   value: boolean;
+  timing = '200';
 
   constructor(
   ) {
