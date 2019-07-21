@@ -12,19 +12,16 @@ export class RubberDirective {
     private element: ElementRef
   ) {
     const directiveAnimation = animationBuilder.build([
-      animate('100ms ease-in', style({
+      animate('400ms ease-in', style({
         transform: 'scaleX(2.0)'
       })),
-      animate('50ms', style({
-        transform: 'scaleX(0.96)'
-      })),
-      animate('100ms ease-in', style({
+      animate('100ms ease-out', style({
         transform: 'scaleX(1.0)'
       })),
-      animate('50ms', style({
+      animate('150ms ease-in', style({
         transform: 'scaleX(1.50)'
       })),
-      animate('200ms ease-in', style({
+      animate('100ms ease-out', style({
         transform: 'scaleX(1.0)'
       })),
     ]);
