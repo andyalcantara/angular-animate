@@ -12,6 +12,7 @@ import { BounceDirective } from './directives/bounce.directive';
 import { FlashDirective } from './directives/flash.directive';
 import { PulseDirective } from './directive/pulse.directive';
 import { RubberDirective } from './directives/rubber.directive';
+import { SwingDirective } from './directives/swing.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RubberDirective } from './directives/rubber.directive';
     BounceDirective,
     FlashDirective,
     PulseDirective,
-    RubberDirective
+    RubberDirective,
+    SwingDirective
   ],
   imports: [
     BrowserModule,
