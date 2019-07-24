@@ -14,6 +14,7 @@ import { PulseDirective } from './directive/pulse.directive';
 import { RubberDirective } from './directives/rubber.directive';
 import { SwingDirective } from './directives/swing.directive';
 import { TadaDirective } from './directives/tada.directive';
+import { WobbleDirective } from './directives/wobble.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TadaDirective } from './directives/tada.directive';
     PulseDirective,
     RubberDirective,
     SwingDirective,
-    TadaDirective
+    TadaDirective,
+    WobbleDirective
   ],
   imports: [
     BrowserModule,
