@@ -21,6 +21,9 @@ export class HeartDirective {
         transform: 'scale(1.5)'
       })),
       animate('100ms ease-in', style({
+        transform: 'scale(1.2)'
+      })),
+      animate('100ms ease-in', style({
         transform: 'scale(1.0)'
       }))
     ]);
