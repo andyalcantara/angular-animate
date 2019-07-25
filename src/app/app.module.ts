@@ -17,6 +17,7 @@ import { TadaDirective } from './directives/tada.directive';
 import { WobbleDirective } from './directives/wobble.directive';
 import { JelloDirective } from './directives/jello.directive';
 import { HeartDirective } from './directives/heart.directive';
+import { BounceInDirective } from './in-directives/bounce-in.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HeartDirective } from './directives/heart.directive';
     TadaDirective,
     WobbleDirective,
     JelloDirective,
-    HeartDirective
+    HeartDirective,
+    BounceInDirective
   ],
   imports: [
     BrowserModule,
