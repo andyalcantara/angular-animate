@@ -11,8 +11,26 @@ export class JelloDirective {
     private element: ElementRef
   ) {
     const directiveAnimation = animationBuilder.build([
-      animate('200ms ease-in', style({
-        transform: 'rotate(-30deg) scaleX(1.5)'
+      animate('150ms ease-in', style({
+        transform: 'skewY(20deg) scaleX(1.1)'
+      })),
+      animate('100ms ease-in', style({
+        transform: 'skewY(-20deg)'
+      })),
+      animate('100ms ease-in', style({
+        transform: 'skewY(10deg)'
+      })),
+      animate('100ms ease-in', style({
+        transform: 'skewY(-10deg)'
+      })),
+      animate('100ms ease-in', style({
+        transform: 'skewY(5deg)'
+      })),
+      animate('100ms ease-in', style({
+        transform: 'skewY(-5deg)'
+      })),
+      animate('100ms ease-in', style({
+        transform: 'skewY(0deg)'
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
