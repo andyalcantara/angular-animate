@@ -16,6 +16,7 @@ import { SwingDirective } from './directives/swing.directive';
 import { TadaDirective } from './directives/tada.directive';
 import { WobbleDirective } from './directives/wobble.directive';
 import { JelloDirective } from './directives/jello.directive';
+import { HeartDirective } from './directives/heart.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { JelloDirective } from './directives/jello.directive';
     SwingDirective,
     TadaDirective,
     WobbleDirective,
-    JelloDirective
+    JelloDirective,
+    HeartDirective
   ],
   imports: [
     BrowserModule,
