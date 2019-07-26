@@ -18,6 +18,7 @@ import { WobbleDirective } from './directives/wobble.directive';
 import { JelloDirective } from './directives/jello.directive';
 import { HeartDirective } from './directives/heart.directive';
 import { BounceInDirective } from './in-directives/bounce-in.directive';
+import { BounceInDownDirective } from './in-derictives/bounce-in-down.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BounceInDirective } from './in-directives/bounce-in.directive';
     WobbleDirective,
     JelloDirective,
     HeartDirective,
-    BounceInDirective
+    BounceInDirective,
+    BounceInDownDirective
   ],
   imports: [
     BrowserModule,
