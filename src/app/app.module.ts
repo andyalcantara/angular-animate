@@ -20,6 +20,7 @@ import { HeartDirective } from './directives/heart.directive';
 import { BounceInDirective } from './in-directives/bounce-in.directive';
 import { BounceInDownDirective } from './in-directives/bounce-in-down.directive';
 import { BounceInLeftDirective } from './in-directives/bounce-in-left.directive';
+import { BounceInRightDirective } from './in-directives/bounce-in-right.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BounceInLeftDirective } from './in-directives/bounce-in-left.directive'
     HeartDirective,
     BounceInDirective,
     BounceInDownDirective,
-    BounceInLeftDirective
+    BounceInLeftDirective,
+    BounceInRightDirective
   ],
   imports: [
     BrowserModule,
