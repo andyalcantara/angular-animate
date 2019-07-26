@@ -19,6 +19,7 @@ import { JelloDirective } from './directives/jello.directive';
 import { HeartDirective } from './directives/heart.directive';
 import { BounceInDirective } from './in-directives/bounce-in.directive';
 import { BounceInDownDirective } from './in-directives/bounce-in-down.directive';
+import { BounceInLeftDirective } from './in-directives/bounce-in-left.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BounceInDownDirective } from './in-directives/bounce-in-down.directive'
     JelloDirective,
     HeartDirective,
     BounceInDirective,
-    BounceInDownDirective
+    BounceInDownDirective,
+    BounceInLeftDirective
   ],
   imports: [
     BrowserModule,
