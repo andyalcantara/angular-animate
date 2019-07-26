@@ -23,6 +23,7 @@ import { BounceInLeftDirective } from './in-directives/bounce-in-left.directive'
 import { BounceInRightDirective } from './in-directives/bounce-in-right.directive';
 import { BounceInUpDirective } from './in-directives/bounce-in-up.directive';
 import { BounceOutDirective } from './out-directives/bounce-out.directive';
+import { BounceOutDownDirective } from './out-directives/bounce-out-down.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { BounceOutDirective } from './out-directives/bounce-out.directive';
     BounceInLeftDirective,
     BounceInRightDirective,
     BounceInUpDirective,
-    BounceOutDirective
+    BounceOutDirective,
+    BounceOutDownDirective
   ],
   imports: [
     BrowserModule,
