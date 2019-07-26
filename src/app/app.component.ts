@@ -9,6 +9,7 @@ export class AppComponent {
   title = 7;
   value: boolean;
   timing = '200';
+  delay = '2000';
 
   constructor(
   ) {
