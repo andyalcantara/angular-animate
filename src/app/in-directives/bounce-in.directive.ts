@@ -24,13 +24,13 @@ export class BounceInDirective implements OnInit {
           transform: 'scale(1.5)',
           opacity: 1,
         })),
-        animate('100ms ease-in', style({
+        animate('200ms ease-in', style({
           transform: 'scale(1.0)'
         })),
         animate('200ms ease-in', style({
           transform: 'scale(1.3)'
         })),
-        animate('100ms ease-in', style({
+        animate('200ms ease-in', style({
           transform: 'scale(1.0)'
         }))
       ]);

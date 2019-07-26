@@ -14,7 +14,7 @@ import { animate, trigger, style, transition, state } from '@angular/animations'
       transition('void => *', [
         style({
           opacity: 0,
-          transform: 'translateY(-100px)'
+          transform: 'translateY(-500px)'
         }),
         animate(500)
       ])
