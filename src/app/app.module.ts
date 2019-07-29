@@ -10,7 +10,7 @@ import { RotateDirectiveDirective } from './directives/rotate-directive.directiv
 import { ShakeAtHoverDirective } from './directives/shake-at-hover.directive';
 import { BounceDirective } from './directives/bounce.directive';
 import { FlashDirective } from './directives/flash.directive';
-import { PulseDirective } from './directive/pulse.directive';
+import { PulseDirective } from './directives/pulse.directive';
 import { RubberDirective } from './directives/rubber.directive';
 import { SwingDirective } from './directives/swing.directive';
 import { TadaDirective } from './directives/tada.directive';
