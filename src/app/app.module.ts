@@ -29,6 +29,7 @@ import { BounceOutRightDirective } from './out-directives/bounce-out-right.direc
 import { BounceOutUpDirective } from './out-directives/bounce-out-up.directive';
 import { FadeInDirective } from './entrance-directive/fade-in.directive';
 import { FadeInDownDirective } from './entrance-directive/fade-in-down.directive';
+import { FadeInDownBigDirective } from './entrance-directive/fade-in-down-big.directive';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { FadeInDownDirective } from './entrance-directive/fade-in-down.directive
     BounceOutRightDirective,
     BounceOutUpDirective,
     FadeInDirective,
-    FadeInDownDirective
+    FadeInDownDirective,
+    FadeInDownBigDirective
   ],
   imports: [
     BrowserModule,

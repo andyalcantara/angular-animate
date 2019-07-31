@@ -13,7 +13,7 @@ export class FadeInDownDirective {
     const directiveAnimation = animationBuilder.build([
       animate('0ms ease-in-out', style({
         opacity: 0,
-        transform: 'translateY(-300px)'
+        transform: 'translateY(-100px)'
       })),
       animate('600ms ease-in-out', style({
         opacity: 1,
