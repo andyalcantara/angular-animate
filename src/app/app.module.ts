@@ -34,6 +34,8 @@ import { FadeInLeftDirective } from './entrance-directive/fade-in-left.directive
 import { FadeInLeftBigDirective } from './entrance-directive/fade-in-left-big.directive';
 import { FadeInRightDirective } from './entrance-directive/fade-in-right.directive';
 import { FadeInRightBigDirective } from './entrance-directive/fade-in-right-big.directive';
+import { FadeInUpDirective } from './entrance-directive/fade-in-up.directive';
+import { FadeInUpBigDirective } from './entrance-directive/fade-in-up-big.directive';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { FadeInRightBigDirective } from './entrance-directive/fade-in-right-big.
     FadeInLeftDirective,
     FadeInLeftBigDirective,
     FadeInRightDirective,
-    FadeInRightBigDirective
+    FadeInRightBigDirective,
+    FadeInUpDirective,
+    FadeInUpBigDirective
   ],
   imports: [
     BrowserModule,
