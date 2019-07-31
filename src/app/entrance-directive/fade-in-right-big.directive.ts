@@ -2,9 +2,9 @@ import {Directive, ElementRef} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
-  selector: '[appFadeInRight]'
+  selector: '[appFadeInRightBig]'
 })
-export class FadeInRightDirective {
+export class FadeInRightBigDirective {
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -13,9 +13,9 @@ export class FadeInRightDirective {
     const directiveAnimation = animationBuilder.build([
       animate('0ms ease-in-out', style({
         opacity: 0,
-        transform: 'translateX(100px)'
+        transform: 'translateX(600px)'
       })),
-      animate('400ms ease-in-out', style({
+      animate('600ms ease-in-out', style({
         opacity: 1,
         transform: 'translateX(0)'
       })),
