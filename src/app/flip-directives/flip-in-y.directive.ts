@@ -13,11 +13,11 @@ export class FlipInYDirective {
     const directiveAnimation = animationBuilder.build([
       animate('0ms ease-in-out', style({
         opacity: 0,
-        transform: 'scale(1.5) rotate(20deg)'
+        transform: 'scale(1.5) rotateY(-120deg)'
       })),
-      animate('500ms ease-in-out', style({
+      animate('600ms ease-in-out', style({
         opacity: 1,
-        transform: 'scale(1) rotate(0deg)'
+        transform: 'scale(1) rotateY(0deg)'
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
