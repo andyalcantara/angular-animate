@@ -49,6 +49,7 @@ import { FlipDirective } from './flip-directives/flip.directive';
 import { FlipInXDirective } from './flip-directives/flip-in-x.directive';
 import { FlipInYDirective } from './flip-directives/flip-in-y.directive';
 import { FlipOutXDirective } from './flip-directives/flip-out-x.directive';
+import { FlipOutYDirective } from './flip-directives/flip-out-y.directive';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { FlipOutXDirective } from './flip-directives/flip-out-x.directive';
     FlipDirective,
     FlipInXDirective,
     FlipInYDirective,
-    FlipOutXDirective
+    FlipOutXDirective,
+    FlipOutYDirective
   ],
   imports: [
     BrowserModule,
