@@ -3,7 +3,7 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
-  selector: '[appPulse]'
+  selector: '[animPulse]'
 })
 export class PulseDirective implements OnInit {
 

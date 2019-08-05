@@ -3,7 +3,7 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
-  selector: '[appRubber]'
+  selector: '[animRubber]'
 })
 export class RubberDirective {
 

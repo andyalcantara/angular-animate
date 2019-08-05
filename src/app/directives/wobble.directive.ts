@@ -2,7 +2,7 @@ import { Directive, ElementRef, Input } from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Directive({
-  selector: '[appWobble]'
+  selector: '[animWobble]'
 })
 export class WobbleDirective {
 

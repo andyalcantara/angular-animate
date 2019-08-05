@@ -3,7 +3,7 @@ import {AnimationBuilder, animate, style } from '@angular/animations';
 
 @Injectable()
 @Directive({
-  selector: '[appTada]'
+  selector: '[animTada]'
 })
 export class TadaDirective {
 

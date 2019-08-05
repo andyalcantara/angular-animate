@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
+import {Angular2Module} from './angular2/angular2.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
     BrowserModule,
     BrowserAnimationsModule,
     InFromTopModule,
-    InFromBottomModule
+    InFromBottomModule,
+    Angular2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

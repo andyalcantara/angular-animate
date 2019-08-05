@@ -2,7 +2,7 @@ import { Directive, ElementRef, Input } from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Directive({
-  selector: '[appJello]'
+  selector: '[animJello]'
 })
 export class JelloDirective {
 

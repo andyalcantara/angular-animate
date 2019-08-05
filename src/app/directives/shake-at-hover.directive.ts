@@ -3,7 +3,7 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
-  selector: '[appShakeAtHover]'
+  selector: '[animShakeAtHover]'
 })
 export class ShakeAtHoverDirective {
 
