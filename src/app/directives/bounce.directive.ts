@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Injectable, HostListener, Input, OnInit} from '@angular/core';
+import {Directive, ElementRef, Injectable, HostListener, Input, OnInit, AfterViewInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
@@ -8,55 +8,37 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 export class BounceDirective implements OnInit {
 
   @Input() atOnInit = false;
+  @Input() delay = 0;
+  @Input() timing = '';
+  @Input() repeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
   ) {}
 
-  @HostListener('click') onMouseClick() {
-    const directiveAnimation = this.animationBuilder.build([
-      animate('50ms ease-in', style({
-        transform: 'translateY(0px)'
-      })),
-      animate('300ms ease-out', style({
-        transform: 'translateY(-40px)'
-      })),
-      animate('50ms ease-in', style({
-        transform: 'translateY(0px)'
-      })),
-      animate('200ms ease-out', style({
-        transform: 'translateY(-20px)'
-      })),
-      animate('100ms ease-in', style({
-        transform: 'translateY(0px)'
-      }))
-    ]);
-
-    const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
-  }
-
   ngOnInit(): void {
-    if (this.atOnInit === true) {
+      setTimeout(() => {
+        const player = directiveAnimation.create(this.element.nativeElement);
+        player.play();
+      }, this.delay);
+
       const directiveAnimation = this.animationBuilder.build([
-        animate('50ms', style({
-          transform: 'translateY(-20px)'
-        })),
-        animate('200ms ease-in', style({
+        animate('50ms ease-in', style({
           transform: 'translateY(0px)'
         })),
-        animate('50ms', style({
+        animate('300ms ease-out', style({
+          transform: 'translateY(-40px)'
+        })),
+        animate('50ms ease-in', style({
+          transform: 'translateY(0px)'
+        })),
+        animate('200ms ease-out', style({
           transform: 'translateY(-20px)'
         })),
-        animate('200ms ease-in', style({
+        animate('100ms ease-in', style({
           transform: 'translateY(0px)'
         }))
       ]);
-
-      const player = directiveAnimation.create(this.element.nativeElement);
-      player.play();
-    }
   }
-
 }
