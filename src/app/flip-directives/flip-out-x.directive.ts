@@ -1,16 +1,18 @@
-import {Directive, ElementRef} from '@angular/core';
+import {Directive, ElementRef, OnInit} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
   selector: '[appFlipOutX]'
 })
-export class FlipOutXDirective {
+export class FlipOutXDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('0ms ease-in-out', style({
         transform: 'scale(1.5) rotateX(0)'
       })),

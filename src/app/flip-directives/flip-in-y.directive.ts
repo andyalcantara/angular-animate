@@ -1,16 +1,18 @@
-import {Directive, ElementRef} from '@angular/core';
+import {Directive, ElementRef, OnInit} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
   selector: '[appFlipInY]'
 })
-export class FlipInYDirective {
+export class FlipInYDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('0ms ease-in-out', style({
         opacity: 0,
         transform: 'scale(1.5) rotateY(-120deg)'
