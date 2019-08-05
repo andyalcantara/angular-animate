@@ -1,16 +1,18 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {AnimationBuilder, animate, style } from '@angular/animations';
 
 @Directive({
   selector: '[animHeart]'
 })
-export class HeartDirective {
+export class HeartDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('200ms ease-out', style({
         transform: 'scale(1.5)'
       })),

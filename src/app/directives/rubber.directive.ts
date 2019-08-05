@@ -1,17 +1,19 @@
-import {Directive, Injectable, ElementRef, Input} from '@angular/core';
+import {Directive, Injectable, ElementRef, Input, OnInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
   selector: '[animRubber]'
 })
-export class RubberDirective {
+export class RubberDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('400ms ease-in', style({
         transform: 'scaleX(2.0)'
       })),

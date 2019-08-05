@@ -1,16 +1,18 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Directive({
   selector: '[animJello]'
 })
-export class JelloDirective {
+export class JelloDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('150ms ease-in', style({
         transform: 'skewY(20deg) scaleX(1.1)'
       })),

@@ -1,17 +1,19 @@
-import { Directive, ElementRef, Injectable } from '@angular/core';
+import {Directive, ElementRef, Injectable, OnInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
   selector: '[animFlash]'
 })
-export class FlashDirective {
+export class FlashDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('300ms ease-in', style({
         opacity: 1
       })),
@@ -29,7 +31,7 @@ export class FlashDirective {
       }))
     ]);
 
-    const player = directiveAnimation.create(element.nativeElement);
+    const player = directiveAnimation.create(this.element.nativeElement);
     player.play();
   }
 

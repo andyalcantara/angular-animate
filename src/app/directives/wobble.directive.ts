@@ -1,16 +1,18 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Directive({
   selector: '[animWobble]'
 })
-export class WobbleDirective {
+export class WobbleDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('200ms ease-in', style({
         transform: 'rotate(-10deg) translateX(-100px)'
       })),

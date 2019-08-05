@@ -1,40 +1,18 @@
-import {Directive, ElementRef, Injectable, HostListener, Input} from '@angular/core';
+import {Directive, ElementRef, Injectable, HostListener, Input, OnInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
   selector: '[animBounce]'
 })
-export class BounceDirective {
+export class BounceDirective implements OnInit {
 
   @Input() atOnInit = false;
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-
-    if (this.atOnInit === true) {
-      const directiveAnimation = animationBuilder.build([
-        animate('50ms', style({
-          transform: 'translateY(-20px)'
-        })),
-        animate('200ms ease-in', style({
-          transform: 'translateY(0px)'
-        })),
-        animate('50ms', style({
-          transform: 'translateY(-20px)'
-        })),
-        animate('200ms ease-in', style({
-          transform: 'translateY(0px)'
-        }))
-      ]);
-
-      const player = directiveAnimation.create(this.element.nativeElement);
-      player.play();
-    }
-
-  }
+  ) {}
 
   @HostListener('click') onMouseClick() {
     const directiveAnimation = this.animationBuilder.build([
@@ -57,6 +35,28 @@ export class BounceDirective {
 
     const player = directiveAnimation.create(this.element.nativeElement);
     player.play();
+  }
+
+  ngOnInit(): void {
+    if (this.atOnInit === true) {
+      const directiveAnimation = this.animationBuilder.build([
+        animate('50ms', style({
+          transform: 'translateY(-20px)'
+        })),
+        animate('200ms ease-in', style({
+          transform: 'translateY(0px)'
+        })),
+        animate('50ms', style({
+          transform: 'translateY(-20px)'
+        })),
+        animate('200ms ease-in', style({
+          transform: 'translateY(0px)'
+        }))
+      ]);
+
+      const player = directiveAnimation.create(this.element.nativeElement);
+      player.play();
+    }
   }
 
 }

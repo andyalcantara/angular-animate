@@ -1,17 +1,19 @@
-import {Directive, Injectable, ElementRef, Input} from '@angular/core';
+import {Directive, Injectable, ElementRef, Input, OnInit} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
 @Directive({
   selector: '[animSwing]'
 })
-export class SwingDirective {
+export class SwingDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
-  ) {
-    const directiveAnimation = animationBuilder.build([
+  ) {}
+
+  ngOnInit(): void {
+    const directiveAnimation = this.animationBuilder.build([
       animate('200ms ease-in', style({
         transform: 'rotate(25deg)'
       })),
@@ -28,7 +30,7 @@ export class SwingDirective {
         transform: 'rotate(0deg)'
       })),
     ]);
-    const player = directiveAnimation.create(element.nativeElement);
+    const player = directiveAnimation.create(this.element.nativeElement);
     player.play();
   }
 
