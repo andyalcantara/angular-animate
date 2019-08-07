@@ -9,12 +9,14 @@ import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { RotateInDownRightDirective } from './rotate-entrance/rotate-in-down-right.directive';
 import { RotateInUpLeftDirective } from './rotate-entrance/rotate-in-up-left.directive';
+import { RotateInUpRightDirective } from './rotate-entrance/rotate-in-up-right.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RotateInDownRightDirective,
-    RotateInUpLeftDirective
+    RotateInUpLeftDirective,
+    RotateInUpRightDirective
   ],
   imports: [
     BrowserModule,
