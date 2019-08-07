@@ -16,7 +16,7 @@ export class LightSpeedInDirective implements OnInit {
       animate(400, keyframes([
         style({
           opacity: 0,
-          transform: 'translateX(400px) skewX(-22deg)'
+          transform: 'translateX(400px) skewX(-42deg)'
         }),
         style({
           opacity: 1,
@@ -25,10 +25,10 @@ export class LightSpeedInDirective implements OnInit {
       ])),
       animate(400, keyframes([
         style({
-          transform: 'skewX(22deg)'
+          transform: 'skewX(42deg)'
         }),
         style({
-          transform: 'skewX(-10deg)'
+          transform: 'skewX(-20deg)'
         }),
         style({
           transform: 'skewX(0)'
