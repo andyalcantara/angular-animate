@@ -8,11 +8,13 @@ import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { RotateInDownRightDirective } from './rotate-entrance/rotate-in-down-right.directive';
+import { RotateInUpLeftDirective } from './rotate-entrance/rotate-in-up-left.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RotateInDownRightDirective
+    RotateInDownRightDirective,
+    RotateInUpLeftDirective
   ],
   imports: [
     BrowserModule,
