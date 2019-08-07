@@ -44,6 +44,7 @@ import { FlipInXDirective } from '../flip-directives/flip-in-x.directive';
 import { FlipInYDirective } from '../flip-directives/flip-in-y.directive';
 import { FlipOutXDirective } from '../flip-directives/flip-out-x.directive';
 import { FlipOutYDirective } from '../flip-directives/flip-out-y.directive';
+import { LightSpeedInDirective } from '../speed-directives/light-speed-in.directive';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { FlipOutYDirective } from '../flip-directives/flip-out-y.directive';
     FlipInXDirective,
     FlipInYDirective,
     FlipOutXDirective,
-    FlipOutYDirective
+    FlipOutYDirective,
+    LightSpeedInDirective
   ],
   imports: [
     CommonModule
@@ -139,7 +141,8 @@ import { FlipOutYDirective } from '../flip-directives/flip-out-y.directive';
     FlipInXDirective,
     FlipInYDirective,
     FlipOutXDirective,
-    FlipOutYDirective
+    FlipOutYDirective,
+    LightSpeedInDirective
   ]
 })
 export class Angular2Module { }
