@@ -6,20 +6,22 @@ import { AppComponent } from './app.component';
 
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
-import {Angular2Module} from './angular2/angular2.module';
+import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { LightSpeedOutDirective } from './speed-directives/light-speed-out.directive';
+import { RotateInDirective } from './rotate-entrance/rotate-in.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LightSpeedOutDirective
+    LightSpeedOutDirective,
+    RotateInDirective
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     InFromTopModule,
     InFromBottomModule,
-    Angular2Module
+    Angular2AnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

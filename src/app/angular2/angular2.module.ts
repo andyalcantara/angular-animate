@@ -145,4 +145,4 @@ import { LightSpeedInDirective } from '../speed-directives/light-speed-in.direct
     LightSpeedInDirective
   ]
 })
-export class Angular2Module { }
+export class Angular2AnimationsModule { }
