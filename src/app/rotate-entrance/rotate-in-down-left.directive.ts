@@ -15,7 +15,7 @@ export class RotateInDownLeftDirective implements OnInit {
     const directiveAnimation = this.animationBuilder.build([
       animate('0ms ease-in-out', style({
         opacity: 0,
-        transformOrigin: 'top left',
+        transformOrigin: 'bottom left',
         transform: 'rotate(-45deg)'
       })),
       animate('500ms ease-in-out', style({
