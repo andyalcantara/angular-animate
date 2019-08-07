@@ -45,6 +45,9 @@ import { FlipInYDirective } from '../flip-directives/flip-in-y.directive';
 import { FlipOutXDirective } from '../flip-directives/flip-out-x.directive';
 import { FlipOutYDirective } from '../flip-directives/flip-out-y.directive';
 import { LightSpeedInDirective } from '../speed-directives/light-speed-in.directive';
+import {LightSpeedOutDirective} from '../speed-directives/light-speed-out.directive';
+import {RotateInDirective} from '../rotate-entrance/rotate-in.directive';
+import {RotateInDownLeftDirective} from '../rotate-entrance/rotate-in-down-left.directive';
 
 @NgModule({
   declarations: [
@@ -92,7 +95,10 @@ import { LightSpeedInDirective } from '../speed-directives/light-speed-in.direct
     FlipInYDirective,
     FlipOutXDirective,
     FlipOutYDirective,
-    LightSpeedInDirective
+    LightSpeedInDirective,
+    LightSpeedOutDirective,
+    RotateInDirective,
+    RotateInDownLeftDirective
   ],
   imports: [
     CommonModule
@@ -142,7 +148,10 @@ import { LightSpeedInDirective } from '../speed-directives/light-speed-in.direct
     FlipInYDirective,
     FlipOutXDirective,
     FlipOutYDirective,
-    LightSpeedInDirective
+    LightSpeedInDirective,
+    LightSpeedOutDirective,
+    RotateInDirective,
+    RotateInDownLeftDirective
   ]
 })
 export class Angular2AnimationsModule { }

@@ -7,16 +7,10 @@ import { AppComponent } from './app.component';
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
-import { LightSpeedOutDirective } from './speed-directives/light-speed-out.directive';
-import { RotateInDirective } from './rotate-entrance/rotate-in.directive';
-import { RotateInDownLeftDirective } from './rotate-entrance/rotate-in-down-left.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LightSpeedOutDirective,
-    RotateInDirective,
-    RotateInDownLeftDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
