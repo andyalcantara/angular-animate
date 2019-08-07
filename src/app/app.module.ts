@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import {Angular2Module} from './angular2/angular2.module';
+import { LightSpeedInDirective } from './speed-directives/light-speed-in.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LightSpeedInDirective
   ],
   imports: [
     BrowserModule,
