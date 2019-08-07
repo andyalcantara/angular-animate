@@ -8,7 +8,7 @@ npm install --save angular2-animations
 After installing the npm package just need to add the Angular2AnimationsModule module
 to your app.module.ts
 
-```angular2
+```js
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,7 +35,7 @@ After this you are all set!!!
 
 Example:
 
-```angular2html
+```html
 <h1 appFlip>Hello World</h1>
 ```
 
