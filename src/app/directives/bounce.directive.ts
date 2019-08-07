@@ -43,10 +43,12 @@ export class BounceDirective implements OnInit {
       }, this.delay);
 
       player.onDone(() => {
+        let counter = 0;
         for (let i = 1; i < this.repeat; i++) {
+          counter = i;
           setTimeout(() => {
             player.play();
-          }, i * this.delay);
+          }, counter * this.delay);
         }
       });
   }
