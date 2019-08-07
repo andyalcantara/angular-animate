@@ -10,13 +10,15 @@ import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { RotateInDownRightDirective } from './rotate-entrance/rotate-in-down-right.directive';
 import { RotateInUpLeftDirective } from './rotate-entrance/rotate-in-up-left.directive';
 import { RotateInUpRightDirective } from './rotate-entrance/rotate-in-up-right.directive';
+import { RotateOutDirective } from './rotate-out/rotate-out.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RotateInDownRightDirective,
     RotateInUpLeftDirective,
-    RotateInUpRightDirective
+    RotateInUpRightDirective,
+    RotateOutDirective
   ],
   imports: [
     BrowserModule,
