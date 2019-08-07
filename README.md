@@ -39,4 +39,4 @@ Example:
 <h1 appFlip>Hello World</h1>
 ```
 
-Working in progress!!!
+Work in progress!!! New animations and features coming soon!
