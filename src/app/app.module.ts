@@ -10,13 +10,15 @@ import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { SlideInUpDirective } from './slide-in-directives/slide-in-up.directive';
 import { SlideInDownDirective } from './slide-in-directives/slide-in-down.directive';
 import { SlideInLeftDirective } from './slide-in-directives/slide-in-left.directive';
+import { SlideInRightDirective } from './slide-in-directives/slide-in-right.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlideInUpDirective,
     SlideInDownDirective,
-    SlideInLeftDirective
+    SlideInLeftDirective,
+    SlideInRightDirective
   ],
   imports: [
     BrowserModule,
