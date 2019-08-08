@@ -14,6 +14,7 @@ import { RotateOutDirective } from './rotate-out/rotate-out.directive';
 import { RotateOutDownLeftDirective } from './rotate-out/rotate-out-down-left.directive';
 import { RotateOutDownRightDirective } from './rotate-out/rotate-out-down-right.directive';
 import { RotateOutUpLeftDirective } from './rotate-out/rotate-out-up-left.directive';
+import { RotateOutUpRightDirective } from './rotate-out/rotate-out-up-right.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RotateOutUpLeftDirective } from './rotate-out/rotate-out-up-left.direct
     RotateOutDirective,
     RotateOutDownLeftDirective,
     RotateOutDownRightDirective,
-    RotateOutUpLeftDirective
+    RotateOutUpLeftDirective,
+    RotateOutUpRightDirective
   ],
   imports: [
     BrowserModule,

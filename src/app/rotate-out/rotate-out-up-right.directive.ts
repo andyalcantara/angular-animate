@@ -2,9 +2,9 @@ import {Directive, ElementRef, OnInit} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
-  selector: '[animRotateOutUpLeft]'
+  selector: '[animRotateOutUpRight]'
 })
-export class RotateOutUpLeftDirective implements OnInit {
+export class RotateOutUpRightDirective implements OnInit {
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -19,8 +19,8 @@ export class RotateOutUpLeftDirective implements OnInit {
       })),
       animate('600ms ease-in-out', style({
         opacity: 0,
-        transformOrigin: 'top left',
-        transform: 'rotate(-90deg)'
+        transformOrigin: 'top right',
+        transform: 'rotate(90deg)'
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
