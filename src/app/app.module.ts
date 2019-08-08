@@ -7,18 +7,10 @@ import { AppComponent } from './app.component';
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
-import { SlideInUpDirective } from './slide-in-directives/slide-in-up.directive';
-import { SlideInDownDirective } from './slide-in-directives/slide-in-down.directive';
-import { SlideInLeftDirective } from './slide-in-directives/slide-in-left.directive';
-import { SlideInRightDirective } from './slide-in-directives/slide-in-right.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SlideInUpDirective,
-    SlideInDownDirective,
-    SlideInLeftDirective,
-    SlideInRightDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,

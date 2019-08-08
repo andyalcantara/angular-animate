@@ -56,6 +56,10 @@ import { RotateOutDirective } from '../rotate-out/rotate-out.directive';
 import { RotateInUpRightDirective } from '../rotate-entrance/rotate-in-up-right.directive';
 import { RotateInUpLeftDirective } from '../rotate-entrance/rotate-in-up-left.directive';
 import { RotateInDownRightDirective } from '../rotate-entrance/rotate-in-down-right.directive';
+import {SlideInUpDirective} from '../slide-in-directives/slide-in-up.directive';
+import {SlideInDownDirective} from '../slide-in-directives/slide-in-down.directive';
+import {SlideInLeftDirective} from '../slide-in-directives/slide-in-left.directive';
+import {SlideInRightDirective} from '../slide-in-directives/slide-in-right.directive';
 
 @NgModule({
   declarations: [
@@ -114,7 +118,11 @@ import { RotateInDownRightDirective } from '../rotate-entrance/rotate-in-down-ri
     RotateOutDownLeftDirective,
     RotateOutDownRightDirective,
     RotateOutUpLeftDirective,
-    RotateOutUpRightDirective
+    RotateOutUpRightDirective,
+    SlideInUpDirective,
+    SlideInDownDirective,
+    SlideInLeftDirective,
+    SlideInRightDirective
   ],
   imports: [
     CommonModule
@@ -175,7 +183,11 @@ import { RotateInDownRightDirective } from '../rotate-entrance/rotate-in-down-ri
     RotateOutDownLeftDirective,
     RotateOutDownRightDirective,
     RotateOutUpLeftDirective,
-    RotateOutUpRightDirective
+    RotateOutUpRightDirective,
+    SlideInUpDirective,
+    SlideInDownDirective,
+    SlideInLeftDirective,
+    SlideInRightDirective
   ]
 })
 export class Angular2AnimationsModule { }
