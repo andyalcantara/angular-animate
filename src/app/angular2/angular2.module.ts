@@ -45,9 +45,17 @@ import { FlipInYDirective } from '../flip-directives/flip-in-y.directive';
 import { FlipOutXDirective } from '../flip-directives/flip-out-x.directive';
 import { FlipOutYDirective } from '../flip-directives/flip-out-y.directive';
 import { LightSpeedInDirective } from '../speed-directives/light-speed-in.directive';
-import {LightSpeedOutDirective} from '../speed-directives/light-speed-out.directive';
-import {RotateInDirective} from '../rotate-entrance/rotate-in.directive';
-import {RotateInDownLeftDirective} from '../rotate-entrance/rotate-in-down-left.directive';
+import { LightSpeedOutDirective } from '../speed-directives/light-speed-out.directive';
+import { RotateInDirective } from '../rotate-entrance/rotate-in.directive';
+import { RotateInDownLeftDirective } from '../rotate-entrance/rotate-in-down-left.directive';
+import { RotateOutUpRightDirective } from '../rotate-out/rotate-out-up-right.directive';
+import { RotateOutUpLeftDirective } from '../rotate-out/rotate-out-up-left.directive';
+import { RotateOutDownRightDirective } from '../rotate-out/rotate-out-down-right.directive';
+import { RotateOutDownLeftDirective } from '../rotate-out/rotate-out-down-left.directive';
+import { RotateOutDirective } from '../rotate-out/rotate-out.directive';
+import { RotateInUpRightDirective } from '../rotate-entrance/rotate-in-up-right.directive';
+import { RotateInUpLeftDirective } from '../rotate-entrance/rotate-in-up-left.directive';
+import { RotateInDownRightDirective } from '../rotate-entrance/rotate-in-down-right.directive';
 
 @NgModule({
   declarations: [
@@ -98,7 +106,15 @@ import {RotateInDownLeftDirective} from '../rotate-entrance/rotate-in-down-left.
     LightSpeedInDirective,
     LightSpeedOutDirective,
     RotateInDirective,
-    RotateInDownLeftDirective
+    RotateInDownLeftDirective,
+    RotateInDownRightDirective,
+    RotateInUpLeftDirective,
+    RotateInUpRightDirective,
+    RotateOutDirective,
+    RotateOutDownLeftDirective,
+    RotateOutDownRightDirective,
+    RotateOutUpLeftDirective,
+    RotateOutUpRightDirective
   ],
   imports: [
     CommonModule
@@ -151,7 +167,15 @@ import {RotateInDownLeftDirective} from '../rotate-entrance/rotate-in-down-left.
     LightSpeedInDirective,
     LightSpeedOutDirective,
     RotateInDirective,
-    RotateInDownLeftDirective
+    RotateInDownLeftDirective,
+    RotateInDownRightDirective,
+    RotateInUpLeftDirective,
+    RotateInUpRightDirective,
+    RotateOutDirective,
+    RotateOutDownLeftDirective,
+    RotateOutDownRightDirective,
+    RotateOutUpLeftDirective,
+    RotateOutUpRightDirective
   ]
 })
 export class Angular2AnimationsModule { }
