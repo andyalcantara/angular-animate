@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
+import { SlideInUpDirective } from './slide-in-directives/slide-in-up.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SlideInUpDirective
   ],
   imports: [
     BrowserModule,
