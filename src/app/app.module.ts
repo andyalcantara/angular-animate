@@ -8,11 +8,13 @@ import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { ZoomInDirective } from './zoom-directives/zoom-in.directive';
+import { ZoomInDownDirective } from './zoom-directives/zoom-in-down.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZoomInDirective
+    ZoomInDirective,
+    ZoomInDownDirective
   ],
   imports: [
     BrowserModule,
