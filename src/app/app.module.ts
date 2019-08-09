@@ -7,20 +7,10 @@ import { AppComponent } from './app.component';
 import { InFromTopModule } from './in-from-top/in-from-top.module';
 import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
-import { ZoomInDirective } from './zoom-directives/zoom-in.directive';
-import { ZoomInDownDirective } from './zoom-directives/zoom-in-down.directive';
-import { ZoomInLeftDirective } from './zoom-directives/zoom-in-left.directive';
-import { ZoomInRightDirective } from './zoom-directives/zoom-in-right.directive';
-import { ZoomInUpDirective } from './zoom-directives/zoom-in-up.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ZoomInDirective,
-    ZoomInDownDirective,
-    ZoomInLeftDirective,
-    ZoomInRightDirective,
-    ZoomInUpDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,

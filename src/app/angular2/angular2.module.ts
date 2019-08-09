@@ -60,6 +60,12 @@ import {SlideInUpDirective} from '../slide-in-directives/slide-in-up.directive';
 import {SlideInDownDirective} from '../slide-in-directives/slide-in-down.directive';
 import {SlideInLeftDirective} from '../slide-in-directives/slide-in-left.directive';
 import {SlideInRightDirective} from '../slide-in-directives/slide-in-right.directive';
+import {ZoomInDirective} from '../zoom-directives/zoom-in.directive';
+import {ZoomInDownDirective} from '../zoom-directives/zoom-in-down.directive';
+import {ZoomInLeftDirective} from '../zoom-directives/zoom-in-left.directive';
+import {ZoomInRightDirective} from '../zoom-directives/zoom-in-right.directive';
+import {ZoomInUpDirective} from '../zoom-directives/zoom-in-up.directive';
+import {ZoomOutDirective} from '../zoom-out-directives/zoom-out.directive';
 
 @NgModule({
   declarations: [
@@ -122,7 +128,13 @@ import {SlideInRightDirective} from '../slide-in-directives/slide-in-right.direc
     SlideInUpDirective,
     SlideInDownDirective,
     SlideInLeftDirective,
-    SlideInRightDirective
+    SlideInRightDirective,
+    ZoomInDirective,
+    ZoomInDownDirective,
+    ZoomInLeftDirective,
+    ZoomInRightDirective,
+    ZoomInUpDirective,
+    ZoomOutDirective
   ],
   imports: [
     CommonModule
@@ -187,7 +199,13 @@ import {SlideInRightDirective} from '../slide-in-directives/slide-in-right.direc
     SlideInUpDirective,
     SlideInDownDirective,
     SlideInLeftDirective,
-    SlideInRightDirective
+    SlideInRightDirective,
+    ZoomInDirective,
+    ZoomInDownDirective,
+    ZoomInLeftDirective,
+    ZoomInRightDirective,
+    ZoomInUpDirective,
+    ZoomOutDirective
   ]
 })
 export class Angular2AnimationsModule { }
