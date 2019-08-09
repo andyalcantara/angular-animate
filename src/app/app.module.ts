@@ -10,13 +10,15 @@ import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { ZoomInDirective } from './zoom-directives/zoom-in.directive';
 import { ZoomInDownDirective } from './zoom-directives/zoom-in-down.directive';
 import { ZoomInLeftDirective } from './zoom-directives/zoom-in-left.directive';
+import { ZoomInRightDirective } from './zoom-directives/zoom-in-right.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ZoomInDirective,
     ZoomInDownDirective,
-    ZoomInLeftDirective
+    ZoomInLeftDirective,
+    ZoomInRightDirective
   ],
   imports: [
     BrowserModule,
