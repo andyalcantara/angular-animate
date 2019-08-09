@@ -9,12 +9,14 @@ import {InFromBottomModule} from './in-from-bottom/in-from-bottom.module';
 import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { ZoomInDirective } from './zoom-directives/zoom-in.directive';
 import { ZoomInDownDirective } from './zoom-directives/zoom-in-down.directive';
+import { ZoomInLeftDirective } from './zoom-directives/zoom-in-left.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ZoomInDirective,
-    ZoomInDownDirective
+    ZoomInDownDirective,
+    ZoomInLeftDirective
   ],
   imports: [
     BrowserModule,
