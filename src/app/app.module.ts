@@ -11,6 +11,7 @@ import { ZoomInDirective } from './zoom-directives/zoom-in.directive';
 import { ZoomInDownDirective } from './zoom-directives/zoom-in-down.directive';
 import { ZoomInLeftDirective } from './zoom-directives/zoom-in-left.directive';
 import { ZoomInRightDirective } from './zoom-directives/zoom-in-right.directive';
+import { ZoomInUpDirective } from './zoom-directives/zoom-in-up.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ZoomInRightDirective } from './zoom-directives/zoom-in-right.directive'
     ZoomInDirective,
     ZoomInDownDirective,
     ZoomInLeftDirective,
-    ZoomInRightDirective
+    ZoomInRightDirective,
+    ZoomInUpDirective
   ],
   imports: [
     BrowserModule,
