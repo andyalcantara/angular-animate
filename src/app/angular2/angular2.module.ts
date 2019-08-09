@@ -70,6 +70,10 @@ import {ZoomOutDownDirective} from '../zoom-out-directives/zoom-out-down.directi
 import {ZoomOutLeftDirective} from '../zoom-out-directives/zoom-out-left.directive';
 import {ZoomOutRightDirective} from '../zoom-out-directives/zoom-out-right.directive';
 import {ZoomOutUpDirective} from '../zoom-out-directives/zoom-out-up.directive';
+import {HingeDirective} from '../cool-anim/hinge.directive';
+import {ZoomRotateDirective} from '../cool-anim/zoom-rotate.directive';
+import {RollInDirective} from '../cool-anim/roll-in.directive';
+import {RollOutDirective} from '../cool-anim/roll-out.directive';
 
 @NgModule({
   declarations: [
@@ -142,7 +146,11 @@ import {ZoomOutUpDirective} from '../zoom-out-directives/zoom-out-up.directive';
     ZoomOutDownDirective,
     ZoomOutLeftDirective,
     ZoomOutRightDirective,
-    ZoomOutUpDirective
+    ZoomOutUpDirective,
+    HingeDirective,
+    ZoomRotateDirective,
+    RollInDirective,
+    RollOutDirective
   ],
   imports: [
     CommonModule
@@ -217,7 +225,11 @@ import {ZoomOutUpDirective} from '../zoom-out-directives/zoom-out-up.directive';
     ZoomOutDownDirective,
     ZoomOutLeftDirective,
     ZoomOutRightDirective,
-    ZoomOutUpDirective
+    ZoomOutUpDirective,
+    HingeDirective,
+    ZoomRotateDirective,
+    RollInDirective,
+    RollOutDirective
   ]
 })
 export class Angular2AnimationsModule { }
