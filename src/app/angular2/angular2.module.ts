@@ -66,6 +66,10 @@ import {ZoomInLeftDirective} from '../zoom-directives/zoom-in-left.directive';
 import {ZoomInRightDirective} from '../zoom-directives/zoom-in-right.directive';
 import {ZoomInUpDirective} from '../zoom-directives/zoom-in-up.directive';
 import {ZoomOutDirective} from '../zoom-out-directives/zoom-out.directive';
+import {ZoomOutDownDirective} from '../zoom-out-directives/zoom-out-down.directive';
+import {ZoomOutLeftDirective} from '../zoom-out-directives/zoom-out-left.directive';
+import {ZoomOutRightDirective} from '../zoom-out-directives/zoom-out-right.directive';
+import {ZoomOutUpDirective} from '../zoom-out-directives/zoom-out-up.directive';
 
 @NgModule({
   declarations: [
@@ -134,7 +138,11 @@ import {ZoomOutDirective} from '../zoom-out-directives/zoom-out.directive';
     ZoomInLeftDirective,
     ZoomInRightDirective,
     ZoomInUpDirective,
-    ZoomOutDirective
+    ZoomOutDirective,
+    ZoomOutDownDirective,
+    ZoomOutLeftDirective,
+    ZoomOutRightDirective,
+    ZoomOutUpDirective
   ],
   imports: [
     CommonModule
@@ -205,7 +213,11 @@ import {ZoomOutDirective} from '../zoom-out-directives/zoom-out.directive';
     ZoomInLeftDirective,
     ZoomInRightDirective,
     ZoomInUpDirective,
-    ZoomOutDirective
+    ZoomOutDirective,
+    ZoomOutDownDirective,
+    ZoomOutLeftDirective,
+    ZoomOutRightDirective,
+    ZoomOutUpDirective
   ]
 })
 export class Angular2AnimationsModule { }
