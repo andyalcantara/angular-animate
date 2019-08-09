@@ -10,13 +10,15 @@ import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { HingeDirective } from './cool-anim/hinge.directive';
 import { ZoomRotateDirective } from './cool-anim/zoom-rotate.directive';
 import { RollInDirective } from './cool-anim/roll-in.directive';
+import { RollOutDirective } from './cool-anim/roll-out.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HingeDirective,
     ZoomRotateDirective,
-    RollInDirective
+    RollInDirective,
+    RollOutDirective
   ],
   imports: [
     BrowserModule,
