@@ -13,7 +13,7 @@ export class HingeDirective implements OnInit {
 
   ngOnInit(): void {
     const directiveAnimation = this.animationBuilder.build([
-      animate('300ms ease-in-out', style({
+      animate('400ms ease-in-out', style({
         transformOrigin: 'bottom left',
         transform: 'rotate(75deg)'
       })),
