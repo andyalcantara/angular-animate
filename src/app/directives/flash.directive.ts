@@ -46,7 +46,7 @@ export class FlashDirective implements OnInit {
         counter = i;
         setTimeout(() => {
           player.play();
-        }, counter * this.delay);
+        }, i * this.delay);
       }
     });
   }
