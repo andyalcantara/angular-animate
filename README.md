@@ -36,7 +36,7 @@ After this you are all set!!!
 Example:
 
 ```html
-<h1 appFlip>Hello World</h1>
+<h1 animFlip>Hello World</h1>
 ```
 
 Work in progress!!! New animations and features coming soon!
