@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Injectable, OnInit} from '@angular/core';
+import {Directive, ElementRef, Injectable, OnInit, Input} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
@@ -6,6 +6,9 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
   selector: '[animFlash]'
 })
 export class FlashDirective implements OnInit {
+
+  @Input() delay = 0;
+  @Input() repeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -32,7 +35,20 @@ export class FlashDirective implements OnInit {
     ]);
 
     const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+
+    setTimeout(() => {
+      player.play();
+    }, this.delay);
+
+    player.onDone(() => {
+      let counter = 0;
+      for (let i = 1; i < this.repeat; i++) {
+        counter = i;
+        setTimeout(() => {
+          player.play();
+        }, counter * this.delay);
+      }
+    });
   }
 
 }
