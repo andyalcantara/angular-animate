@@ -2,7 +2,7 @@ import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import { AnimationBuilder, animate, style } from '@angular/animations';
 
 @Directive({
-  selector: '[appFadeIn]'
+  selector: '[animFadeIn]'
 })
 export class FadeInDirective implements OnInit {
 

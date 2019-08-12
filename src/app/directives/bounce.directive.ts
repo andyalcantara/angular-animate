@@ -9,7 +9,6 @@ export class BounceDirective implements OnInit {
 
   @Input() atOnInit = false;
   @Input() delay = 0;
-  @Input() timing = '';
   @Input() repeat = 0;
 
   constructor(

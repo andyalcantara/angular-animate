@@ -1,4 +1,4 @@
-import {Directive, Injectable, ElementRef, Renderer2, HostListener, Input} from '@angular/core';
+import {Directive, Injectable, ElementRef, HostListener, Input} from '@angular/core';
 import { AnimationBuilder, style, animate } from '@angular/animations';
 
 @Injectable()
@@ -13,7 +13,6 @@ export class RotateDirectiveDirective {
   constructor(
     private animationBuilder: AnimationBuilder,
     private el: ElementRef,
-    private renderer: Renderer2
   ) { }
 
   @HostListener('click', ['$event']) onMouseClick() {
