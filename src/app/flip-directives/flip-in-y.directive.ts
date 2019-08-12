@@ -2,7 +2,7 @@ import {Directive, ElementRef, OnInit} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
-  selector: '[appFlipInY]'
+  selector: '[animFlipInY]'
 })
 export class FlipInYDirective implements OnInit {
 
