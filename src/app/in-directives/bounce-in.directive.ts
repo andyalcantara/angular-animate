@@ -3,7 +3,7 @@ import {AnimationBuilder, animate, style } from '@angular/animations';
 
 @Injectable()
 @Directive({
-  selector: '[appBounceIn]'
+  selector: '[animBounceIn]'
 })
 export class BounceInDirective implements OnInit {
 

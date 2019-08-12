@@ -2,7 +2,7 @@ import {Directive, ElementRef, Injectable, Input, OnInit} from '@angular/core';
 import {AnimationBuilder, animate, style } from '@angular/animations';
 
 @Directive({
-  selector: '[appBounceInDown]'
+  selector: '[animBounceInDown]'
 })
 export class BounceInDownDirective implements OnInit {
 

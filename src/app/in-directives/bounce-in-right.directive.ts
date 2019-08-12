@@ -2,7 +2,7 @@ import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
-  selector: '[appBounceInRight]'
+  selector: '[animBounceInRight]'
 })
 export class BounceInRightDirective implements OnInit {
 
