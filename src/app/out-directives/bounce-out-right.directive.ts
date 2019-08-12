@@ -2,7 +2,7 @@ import { Directive, ElementRef, Input } from '@angular/core';
 import {AnimationBuilder, animate, style} from '@angular/animations';
 
 @Directive({
-  selector: '[appBounceOutRight]'
+  selector: '[animBounceOutRight]'
 })
 export class BounceOutRightDirective {
 

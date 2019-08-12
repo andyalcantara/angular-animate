@@ -2,7 +2,7 @@ import {Directive, ElementRef} from '@angular/core';
 import {animate, AnimationBuilder, style} from '@angular/animations';
 
 @Directive({
-  selector: '[appBounceOutDown]'
+  selector: '[animBounceOutDown]'
 })
 export class BounceOutDownDirective {
 
