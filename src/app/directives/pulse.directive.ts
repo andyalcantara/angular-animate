@@ -7,8 +7,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class PulseDirective implements OnInit {
 
-  @Input() appPulse: number;
   @Input() delay = 0;
+  @Input() repeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -31,6 +31,14 @@ export class PulseDirective implements OnInit {
     setTimeout(() => {
       player.play();
     }, this.delay);
+
+    player.onDone(() => {
+      for (let i = 1; i < this.repeat; i++) {
+        setTimeout(() => {
+          player.play();
+        }, i * this.delay);
+      }
+    });
   }
 
   ngOnInit(): void {
