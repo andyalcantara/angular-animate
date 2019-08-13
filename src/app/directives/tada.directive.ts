@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Injectable, OnInit} from '@angular/core';
+import {Directive, ElementRef, Injectable, Input, OnInit} from '@angular/core';
 import {AnimationBuilder, animate, style } from '@angular/animations';
 
 @Injectable()
@@ -6,6 +6,9 @@ import {AnimationBuilder, animate, style } from '@angular/animations';
   selector: '[animTada]'
 })
 export class TadaDirective implements OnInit {
+
+  @Input() delay = 0;
+  @Input() repeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -45,7 +48,20 @@ export class TadaDirective implements OnInit {
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+
+    setTimeout(() => {
+      player.play();
+    }, this.delay);
+
+    player.onDone(() => {
+      let counter = 0;
+      for (let i = 1; i < this.repeat; i++) {
+        counter = i;
+        setTimeout(() => {
+          player.play();
+        }, i * this.delay);
+      }
+    });
   }
 
 }

@@ -8,6 +8,7 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 export class PulseDirective implements OnInit {
 
   @Input() appPulse: number;
+  @Input() delay = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -17,17 +18,19 @@ export class PulseDirective implements OnInit {
 
   animation() {
     const directiveAnimation = this.animationBuilder.build([
-      animate(this.appPulse + 'ms ease-in', style({
+      animate('200ms ease-in', style({
         transform: 'scale(1.2)'
       })),
 
-      animate(this.appPulse + 'ms ease-in', style({
+      animate('200ms ease-in', style({
         transform: 'scale(1)'
       })),
     ]);
 
     const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+    setTimeout(() => {
+      player.play();
+    }, this.delay);
   }
 
   ngOnInit(): void {
