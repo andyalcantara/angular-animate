@@ -18,7 +18,7 @@ export class BounceDirective implements OnInit {
 
   ngOnInit(): void {
       const directiveAnimation = this.animationBuilder.build([
-        animate('50ms ease-in', style({
+        animate('50ms 2000ms ease-in', style({
           transform: 'translateY(0px)'
         })),
         animate('300ms ease-out', style({
@@ -36,16 +36,11 @@ export class BounceDirective implements OnInit {
       ]);
 
       const player = directiveAnimation.create(this.element.nativeElement);
-
-      setTimeout(() => {
-        player.play();
-      }, this.delay);
+      player.play();
 
       player.onDone(() => {
         for (let i = 1; i < this.repeat; i++) {
-          setTimeout(() => {
             player.play();
-          }, i * this.delay);
         }
       });
   }
