@@ -2,7 +2,7 @@ import { HingeDirective } from './hinge.directive';
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from '../app.component';
 
-fdescribe('HingeDirective', () => {
+describe('HingeDirective', () => {
   beforeEach(() => {
     const fixture = TestBed.configureTestingModule({
       declarations: [AppComponent, HingeDirective]
