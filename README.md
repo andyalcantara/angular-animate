@@ -1,5 +1,8 @@
 # Angular2 Animations
 
+Angular2Animations package provide a set of directive for animating
+html elements.
+
 Installing instructions:
 ```
 npm install --save angular2-animations
@@ -36,7 +39,7 @@ After this you are all set!!!
 Example:
 
 ```html
-<h1 animFlip>Hello World</h1>
+<h1 animFlip [delay]="200" [repeat]="2">Hello World</h1>
 ```
 
 Work in progress!!! New animations and features coming soon!
