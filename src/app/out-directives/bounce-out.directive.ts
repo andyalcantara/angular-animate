@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class BounceOutDirective {
 
-  @Input() delay: number;
-  @Input() timing = '300ms';
+  @Input() delay = 0;
+  @Input() repeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -26,7 +26,18 @@ export class BounceOutDirective {
        }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+
+    setTimeout(() => {
+      player.play();
+    });
+
+    player.onDone(() => {
+      for (let i = 1; i < this.repeat; i++) {
+        setTimeout(() => {
+          player.play();
+        }, i * this.delay);
+      }
+    });
   }
 
 }
