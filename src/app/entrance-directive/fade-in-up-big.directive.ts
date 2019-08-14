@@ -29,7 +29,7 @@ export class FadeInUpBigDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    });
+    }, this.delay);
 
     player.onDone(() => {
       for (let i = 1; i < this.repeat; i++) {
