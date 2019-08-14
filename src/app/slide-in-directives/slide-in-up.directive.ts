@@ -6,6 +6,9 @@ import {AnimationBuilder, animate, style} from '@angular/animations';
 })
 export class SlideInUpDirective implements OnInit {
 
+  @Input() delay = 0;
+  @Input() repeat = 0;
+
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
@@ -21,7 +24,18 @@ export class SlideInUpDirective implements OnInit {
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+
+    setTimeout(() => {
+      player.play();
+    });
+
+    player.onDone(() => {
+      for (let i = 1; i < this.repeat; i++) {
+        setTimeout(() => {
+          player.play();
+        }, i * this.delay);
+      }
+    });
   }
 
 }

@@ -1,10 +1,13 @@
-import {Directive, ElementRef, OnInit} from '@angular/core';
+import {Directive, ElementRef, Input, OnInit} from '@angular/core';
 import {animate, AnimationBuilder, style, keyframes} from '@angular/animations';
 
 @Directive({
   selector: '[animSlideInDown]'
 })
 export class SlideInDownDirective implements OnInit {
+
+  @Input() delay = 0;
+  @Input() repeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -21,7 +24,18 @@ export class SlideInDownDirective implements OnInit {
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
-    player.play();
+
+    setTimeout(() => {
+      player.play();
+    });
+
+    player.onDone(() => {
+      for (let i = 1; i < this.repeat; i++) {
+        setTimeout(() => {
+          player.play();
+        }, i * this.delay);
+      }
+    });
   }
 
 }
