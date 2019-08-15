@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular2-animations": [
+        "dist/angular2-animations"
+      ],
+      "angular2-animations/*": [
+        "dist/angular2-animations/*"
+      ]
+    }
   }
 }
