@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 // Import Angular2Animations Module
-import { Angular2AnimationsModule } from './angular2/angular2.module';
+import { Angular2AnimationsModule } from 'angular2-animations';
 
 @NgModule({
   declarations: [
