@@ -21,12 +21,13 @@ export class MouseEnterDirective {
 
   @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent) {
     const circle = document.createElement('div');
+    console.log(circle.clientWidth);
     const container = this.element.nativeElement;
     this.element.nativeElement.style.position = 'relative';
     circle.id = 'circle';
     circle.style.position = 'absolute';
     circle.style.backgroundColor = 'blue';
-    circle.style.borderRadius = `${container.getBoundingClientRect().width}px`;
+    circle.style.borderRadius = '100%';
     circle.style.left = `${event.pageX - container.offsetLeft}px`;
     circle.style.top = `${event.pageY - container.offsetTop}px`;
 
@@ -38,7 +39,7 @@ export class MouseEnterDirective {
       animate('200ms', style({
         width: '100%',
         height: '100%',
-        borderRadius: 0,
+        borderRadius: '0',
         left: 0,
         top: 0
       }))
@@ -50,20 +51,26 @@ export class MouseEnterDirective {
 
   @HostListener('mouseleave', ['$event']) onMouseOut(event: MouseEvent) {
     const circle = document.getElementById('circle');
+    console.log(circle.clientWidth)
     const directiveAnimation = this.animationBuilder.build([
       animate('200ms', style({
         width: 0,
         height: 0,
         left: `${event.pageX - this.element.nativeElement.offsetLeft}px`,
         top: `${event.pageY - this.element.nativeElement.offsetTop}px`,
-        borderRadius: `${this.element.nativeElement.getBoundingClientRect().width}px`
+        borderRadius: '100%'
       }))
     ]);
 
     const player = directiveAnimation.create(circle);
     player.play();
     player.onDone(() => {
-      this.element.nativeElement.removeChild(circle);
+      if (this.element.nativeElement.children) {
+        this.element.nativeElement.removeChild(circle);
+      } else {
+        const oldCircle = document.getElementById('circle');
+        this.element.nativeElement.removeChild(oldCircle);
+      }
     });
   }
 }
