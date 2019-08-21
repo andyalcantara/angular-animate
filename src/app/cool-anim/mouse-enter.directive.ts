@@ -34,38 +34,73 @@ export class MouseEnterDirective {
     circle.style.backgroundColor = 'blue';
     circle.style.overflow = 'hidden';
     circle.style.borderRadius = '100%';
-    circle.style.left = `${left}px`;
-    circle.style.top = `${top}px`;
-    circle.style.width = '0';
-    circle.style.height = '0';
+    circle.style.width = '1px';
+    circle.style.height = '1px';
 
     this.element.nativeElement.appendChild(circle);
 
     const directiveAnimation = this.animationBuilder.build([
-      animate('700ms', style({
-        width: '140%',
-        height: '200%',
-        left: `${-parseInt(circle.style.width, 10) / 2}px`,
-        top: `${-parseInt(circle.style.height, 10) / 2}px`,
-        borderRadius: '0'
-      }))
+      animate('400ms', keyframes([
+        style({
+          width: '40px',
+          height: '40px',
+          left: `${left - 20}px`,
+          top: `${top - 20}px`,
+          borderRadius: `100%`,
+          overflow: 'hidden'
+        }),
+        style({
+          width: '80px',
+          height: '80px',
+          left: `${left - 40}px`,
+          top: `${top - 40}px`,
+          borderRadius: `100%`
+        }),
+        style({
+          width: '160px',
+          height: '160px',
+          left: `${left - 80}px`,
+          top: `${top -80}px`,
+          borderRadius: `100%`,
+          overflow: 'hidden'
+        }),
+        style({
+          width: '320px',
+          height: '320px',
+          left: `${left - 160}px`,
+          top: `${top -160}px`,
+          borderRadius: `100%`,
+          overflow: 'hidden'
+        }),
+        style({
+          width: '640px',
+          height: '640px',
+          left: `${left - 320}px`,
+          top: `${top - 320}px`,
+          borderRadius: `100%`,
+          overflow: 'hidden'
+        }),
+        style({
+          width: '1280px',
+          height: '1280px',
+          left: `${left - 640}px`,
+          top: `${top - 640}px`,
+          borderRadius: '100%',
+          overflow: 'hidden'
+        }),
+        style({
+          width: '2560px',
+          height: '2560px',
+          left: `${left - 1280}px`,
+          top: `${top - 1280}px`,
+          borderRadius: '100%',
+          overflow: 'hidden'
+        })
+      ]))
     ]);
-
+    console.log(parseInt(circle.style.width, 10) / 2);
     const player = directiveAnimation.create(circle);
     player.play();
-  }
-
-
-  @HostListener('mousemove', ['$event']) onMouseMove(event: MouseEvent) {
-    const circle = document.getElementById('circle');
-    const container = this.element.nativeElement;
-
-    circle.style.top = `${(event.pageY - container.offsetTop) * 2}`;
-    circle.style.left = `${-(event.pageY - container.offsetLeft) * 2}`;
-    circle.style.borderRadius = `${(event.pageY - container.offsetTop) * 5}`;
-    circle.style.width = `${(event.pageY - container.offsetTop) * 2}`;
-    circle.style.height = `${(event.pageY - container.offsetTop) * 2}`;
-    circle.style.overflow = 'hidden';
   }
 
   @HostListener('mouseleave', ['$event']) onMouseOut(event: MouseEvent) {
@@ -73,25 +108,19 @@ export class MouseEnterDirective {
     console.log(circle.clientWidth);
 
     const directiveAnimation = this.animationBuilder.build([
-      animate('200ms', style({
+      animate('300ms', style({
         width: 0,
         height: 0,
         left: `${event.pageX - this.element.nativeElement.offsetLeft}px`,
         top: `${event.pageY - this.element.nativeElement.offsetTop}px`,
-        borderRadius: '0'
+        borderRadius: '100%'
       }))
     ]);
 
     const player = directiveAnimation.create(circle);
     player.play();
-
     player.onDone(() => {
-      if (this.element.nativeElement.children) {
-        this.element.nativeElement.removeChild(circle);
-      } else {
-        const oldCircle = document.getElementById('circle');
-        this.element.nativeElement.removeChild(oldCircle);
-      }
+      this.element.nativeElement.removeChild(circle);
     });
   }
 }
