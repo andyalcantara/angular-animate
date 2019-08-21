@@ -5,29 +5,22 @@ import {AnimationBuilder, animate, style, keyframes } from '@angular/animations'
   selector: '[animMouseEnter]'
 })
 export class MouseEnterDirective {
-
-  xValue: number;
-  yValue: number;
-
-  offsetX: number;
-  offsetY: string;
+  isDone: boolean;
 
   constructor(
     private animationBuilder: AnimationBuilder,
     private element: ElementRef
   ) { }
 
-  // Element to expand with different color
-
   @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent) {
+    this.element.nativeElement.style.overflow = 'hidden';
     const circle = document.createElement('div');
 
     const container = this.element.nativeElement;
     this.element.nativeElement.style.position = 'relative';
+
     const left = event.pageX - container.offsetLeft;
     const top = event.pageY - container.offsetTop;
-
-    console.log(left);
 
     circle.id = 'circle';
     circle.style.position = 'absolute';
@@ -95,17 +88,26 @@ export class MouseEnterDirective {
           top: `${top - 1280}px`,
           borderRadius: '100%',
           overflow: 'hidden'
+        }),
+        style({
+          width: `${window.innerWidth * 2}px`,
+          height: `${window.innerWidth * 2}px`,
+          left: `${-window.innerWidth / 2}px`,
+          top: `${-window.innerHeight / 2}px`,
+          borderRadius: '100%',
+          overflow: 'hidden'
         })
       ]))
     ]);
-    console.log(parseInt(circle.style.width, 10) / 2);
     const player = directiveAnimation.create(circle);
     player.play();
+    player.onDone(() => {
+      this.isDone = true;
+    });
   }
 
   @HostListener('mouseleave', ['$event']) onMouseOut(event: MouseEvent) {
     const circle = document.getElementById('circle');
-    console.log(circle.clientWidth);
 
     const directiveAnimation = this.animationBuilder.build([
       animate('300ms', style({
