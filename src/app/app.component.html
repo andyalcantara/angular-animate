@@ -18,8 +18,11 @@
   ></div>
 
   <div style="height: 300px;">
-    <div animMouseEnter [color]="'rgb(32, 123, 54)'"
-         style="overflow: hidden; width: 100%; height: 400px; background-color: red; margin-bottom: 100px;">
+    <div animMouseEnter
+         [color]="'rgb(32, 123, 54)'"
+         [inTiming]="700"
+         [outTiming]="200"
+         style="width: 100%; height: 400px; background-color: red; margin-bottom: 100px;">
       <h5 style="z-index: 10; position: relative;">Hello world</h5>
     </div>
 
