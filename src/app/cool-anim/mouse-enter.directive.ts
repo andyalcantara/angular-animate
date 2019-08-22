@@ -1,11 +1,12 @@
-import { Directive, HostListener, ElementRef } from '@angular/core';
+import {Directive, HostListener, ElementRef, Input} from '@angular/core';
 import {AnimationBuilder, animate, style, keyframes } from '@angular/animations';
 
 @Directive({
   selector: '[animMouseEnter]'
 })
 export class MouseEnterDirective {
-  isDone: boolean;
+
+  @Input() color: string = 'blue';
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -24,7 +25,7 @@ export class MouseEnterDirective {
 
     circle.id = 'circle';
     circle.style.position = 'absolute';
-    circle.style.backgroundColor = 'blue';
+    circle.style.backgroundColor = this.color;
     circle.style.overflow = 'hidden';
     circle.style.borderRadius = '100%';
     circle.style.width = '1px';
@@ -101,9 +102,6 @@ export class MouseEnterDirective {
     ]);
     const player = directiveAnimation.create(circle);
     player.play();
-    player.onDone(() => {
-      this.isDone = true;
-    });
   }
 
   @HostListener('mouseleave', ['$event']) onMouseOut(event: MouseEvent) {
