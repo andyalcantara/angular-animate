@@ -36,10 +36,15 @@ export class AppModule { }
 ```
 After this you are all set!!!
 
-Example:
+Examples:
 
 ```html
 <h1 animFlip [delay]="200" [repeat]="2">Hello World</h1>
 ```
-
+[animMouseEnter] is a different animation it is meant to signify that the mouse enter a certain area.
+A circle with the color specified will expand from the position at which the mouse entered the element.
+It can be controlled the timing of the animation when it enters and the timing of the animation when leaves.
+```html
+<div animMouseEnter [color]="'red'" [inTiming]="400" [outTiming]="500"></div>
+```
 Work in progress!!! New animations and features coming soon!
