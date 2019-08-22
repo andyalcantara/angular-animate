@@ -6,7 +6,7 @@ import {AnimationBuilder, animate, style, keyframes } from '@angular/animations'
 })
 export class MouseEnterDirective {
 
-  @Input() color: string = 'blue';
+  @Input() color = 'blue';
 
   constructor(
     private animationBuilder: AnimationBuilder,
