@@ -8,7 +8,6 @@ export class MouseClickDirective {
 
   @Input() color = 'blue';
   @Input() inTiming = 400;
-  @Input() outTiming = 400;
 
   constructor(
     private element: ElementRef,
