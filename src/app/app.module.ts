@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { Angular2AnimationsModule } from './angular2/angular2.module';
 import { MouseEnterDirective } from './cool-anim/mouse-enter.directive';
+import { MouseClickDirective } from './cool-anim/mouse-click.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MouseEnterDirective
+    MouseEnterDirective,
+    MouseClickDirective
   ],
   imports: [
     BrowserModule,
