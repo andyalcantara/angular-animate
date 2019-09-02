@@ -99,10 +99,6 @@ export class MouseEnterDirective {
     ]);
     const player = directiveAnimation.create(circle);
     player.play();
-    const circles = document.querySelectorAll('circle');
-    console.log(circles.length, 'Many Circles');
-    console.log(circles);
-    console.log(this.element.nativeElement.children, 'These are the children');
   }
 
   @HostListener('mouseleave', ['$event']) onMouseOut(event: MouseEvent) {
@@ -121,9 +117,7 @@ export class MouseEnterDirective {
     player.play();
     player.onDone(() => {
       if (circle) {
-        console.log(circle);
         circle.remove();
-        console.log(this.element.nativeElement.children, 'Children');
       }
     });
   }
