@@ -2,11 +2,11 @@ import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 import {animate, AnimationBuilder, keyframes, style} from '@angular/animations';
 
 @Directive({
-  selector: '[animMouseClick]'
+  selector: 'button[animMouseClick]'
 })
 export class MouseClickDirective {
 
-  @Input() color = 'blue';
+  @Input() clickColor = 'blue';
   @Input() inTiming = 400;
 
   constructor(
@@ -26,7 +26,7 @@ export class MouseClickDirective {
 
     circle.id = 'circle';
     circle.style.position = 'absolute';
-    circle.style.backgroundColor = this.color;
+    circle.style.backgroundColor = this.clickColor;
     circle.style.opacity = '0.5';
     circle.style.overflow = 'hidden';
     circle.style.borderRadius = '100%';

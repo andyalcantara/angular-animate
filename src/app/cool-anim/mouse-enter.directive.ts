@@ -2,7 +2,7 @@ import {Directive, HostListener, ElementRef, Input} from '@angular/core';
 import {AnimationBuilder, animate, style, keyframes } from '@angular/animations';
 
 @Directive({
-  selector: '[animMouseEnter]'
+  selector: 'div[animMouseEnter]'
 })
 export class MouseEnterDirective {
 
@@ -16,11 +16,13 @@ export class MouseEnterDirective {
   ) { }
 
   @HostListener('mouseenter', ['$event']) onMouseEnter(event: MouseEvent) {
+
     this.element.nativeElement.style.overflow = 'hidden';
     const circle = document.createElement('div');
 
     const container = this.element.nativeElement;
-    this.element.nativeElement.style.position = 'relative';
+    container.id = 'parent';
+    container.style.position = 'relative';
 
     const left = event.pageX - container.offsetLeft;
     const top = event.pageY - container.offsetTop;
@@ -33,7 +35,7 @@ export class MouseEnterDirective {
     circle.style.width = '1px';
     circle.style.height = '1px';
 
-    this.element.nativeElement.appendChild(circle);
+    container.appendChild(circle);
 
     const directiveAnimation = this.animationBuilder.build([
       animate(`${this.inTiming}ms`, keyframes([
@@ -97,11 +99,14 @@ export class MouseEnterDirective {
     ]);
     const player = directiveAnimation.create(circle);
     player.play();
+    const circles = document.querySelectorAll('circle');
+    console.log(circles.length, 'Many Circles');
+    console.log(circles);
+    console.log(this.element.nativeElement.children, 'These are the children');
   }
 
   @HostListener('mouseleave', ['$event']) onMouseOut(event: MouseEvent) {
     const circle = document.getElementById('circle');
-
     const directiveAnimation = this.animationBuilder.build([
       animate(`${this.outTiming}ms`, style({
         width: 0,
@@ -115,7 +120,11 @@ export class MouseEnterDirective {
     const player = directiveAnimation.create(circle);
     player.play();
     player.onDone(() => {
-      this.element.nativeElement.removeChild(circle);
+      if (circle) {
+        console.log(circle);
+        circle.remove();
+        console.log(this.element.nativeElement.children, 'Children');
+      }
     });
   }
 }
