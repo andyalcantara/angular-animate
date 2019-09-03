@@ -51,4 +51,5 @@ It can be controlled the timing of the animation when it enters and the timing o
 ```html
 <button animate-button [clickColor]="'purple'" [inTiming]="800">Click Me</button>
 ```
+![animate-button](animate-button.gif)
 Work in progress!!! New animations and features coming soon!
