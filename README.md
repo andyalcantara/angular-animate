@@ -47,4 +47,8 @@ It can be controlled the timing of the animation when it enters and the timing o
 ```html
 <div animMouseEnter [color]="'red'" [inTiming]="400" [outTiming]="500"></div>
 ```
+[animate-button] is the same animation as animMouseEnter but only available for buttons
+```html
+<button animate-button [clickColor]="'purple'" [inTiming]="800">Click Me</button>
+```
 Work in progress!!! New animations and features coming soon!

@@ -74,6 +74,8 @@ import {HingeDirective} from '../cool-anim/hinge.directive';
 import {ZoomRotateDirective} from '../cool-anim/zoom-rotate.directive';
 import {RollInDirective} from '../cool-anim/roll-in.directive';
 import {RollOutDirective} from '../cool-anim/roll-out.directive';
+import {MouseClickDirective} from '../cool-anim/mouse-click.directive';
+import {MouseEnterDirective} from '../cool-anim/mouse-enter.directive';
 
 @NgModule({
   declarations: [
@@ -150,7 +152,9 @@ import {RollOutDirective} from '../cool-anim/roll-out.directive';
     HingeDirective,
     ZoomRotateDirective,
     RollInDirective,
-    RollOutDirective
+    RollOutDirective,
+    MouseEnterDirective,
+    MouseClickDirective
   ],
   imports: [
     CommonModule
@@ -229,7 +233,9 @@ import {RollOutDirective} from '../cool-anim/roll-out.directive';
     HingeDirective,
     ZoomRotateDirective,
     RollInDirective,
-    RollOutDirective
+    RollOutDirective,
+    MouseEnterDirective,
+    MouseClickDirective
   ]
 })
 export class Angular2AnimationsModule { }

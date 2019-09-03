@@ -2,7 +2,7 @@ import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 import {animate, AnimationBuilder, keyframes, style} from '@angular/animations';
 
 @Directive({
-  selector: 'button[animMouseClick]'
+  selector: 'button[animate-button]'
 })
 export class MouseClickDirective {
 
