@@ -7,8 +7,8 @@ import {AnimationBuilder, animate, style } from '@angular/animations';
 })
 export class TadaDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() tadaDelay = 0;
+  @Input() tadaRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -51,13 +51,13 @@ export class TadaDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.tadaDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.tadaRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.tadaDelay);
       }
     });
   }

@@ -8,8 +8,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 export class BounceDirective implements OnInit {
 
   @Input() atOnInit = false;
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() bounceDelay = 0;
+  @Input() bounceRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -39,13 +39,13 @@ export class BounceDirective implements OnInit {
 
       setTimeout(() => {
         player.play();
-      }, this.delay);
+      }, this.bounceDelay);
 
       player.onDone(() => {
-        for (let i = 1; i < this.repeat; i++) {
+        for (let i = 1; i < this.bounceRepeat; i++) {
           setTimeout(() => {
             player.play();
-          }, i * this.delay);
+          }, i * this.bounceDelay);
         }
       });
   }

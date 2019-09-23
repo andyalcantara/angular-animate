@@ -10,7 +10,7 @@ describe('ZoomRotateDirective', () => {
       .createComponent(ZoomRotateDirective);
     fixture.detectChanges();
 
-    it('delay should be zero if not input given', () => {
+    it('bounceDelay should be zero if not input given', () => {
       const delay: number = fixture.componentInstance.delay;
       expect(delay).toBe(0);
     });

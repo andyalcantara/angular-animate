@@ -7,8 +7,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class FlashDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() flashDelay = 0;
+  @Input() flashRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -38,13 +38,13 @@ export class FlashDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.flashDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.flashRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.flashDelay);
       }
     });
   }

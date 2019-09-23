@@ -6,8 +6,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class WobbleDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() wobbleDelay = 0;
+  @Input() wobbleRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -43,13 +43,13 @@ export class WobbleDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.wobbleDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.wobbleRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.wobbleDelay);
       }
     });
   }

@@ -7,8 +7,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class ShakeAtHoverDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() shakeDelay = 0;
+  @Input() shakeRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -44,13 +44,13 @@ export class ShakeAtHoverDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.shakeDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.shakeRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.shakeDelay);
       }
     });
   }

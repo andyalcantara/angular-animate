@@ -6,8 +6,8 @@ import {AnimationBuilder, animate, style } from '@angular/animations';
 })
 export class HeartDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() heartDelay = 0;
+  @Input() heartRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -36,13 +36,13 @@ export class HeartDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.heartDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.heartRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.heartDelay);
       }
     });
   }

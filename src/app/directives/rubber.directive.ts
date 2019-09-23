@@ -7,8 +7,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class RubberDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() rubberDelay = 0;
+  @Input() rubberRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -35,13 +35,13 @@ export class RubberDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.rubberDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.rubberRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.rubberDelay);
       }
     });
   }

@@ -6,8 +6,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class JelloDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() jelloDelay = 0;
+  @Input() jelloRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -42,13 +42,13 @@ export class JelloDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.jelloDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.jelloRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.jelloDelay);
       }
     });
   }
