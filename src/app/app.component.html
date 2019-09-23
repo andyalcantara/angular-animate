@@ -15,15 +15,15 @@
   <div style="height: 300px;">
     <div
       animMouseEnter
-         [color]="'rgb(32, 123, 54)'"
+         [enterColor]="'rgb(32, 123, 54)'"
          [inTiming]="700"
          [outTiming]="200"
-         style="width: 100%; height: 400px; background-color: red; margin-bottom: 100px;">
+         style="width: 100%; height: 400px; background-color: red; margin-bottom: 100px; overflow: hidden;">
       <h5 style="z-index: 10; position: relative;">Hello world</h5>
-      <button animate-button [clickColor]="'brown'" style="z-index: 10;">Click me me</button>
+      <button animate-button [clickColor]="'brown'" style="overflow: hidden;">Click me me</button>
     </div>
 
-    <button animate-button [inTiming]="700" [clickColor]="'green'" style="height: 80px; width: 150px;">Click me</button>
+    <button animHinge [hingeDelay]="3000" animRollIn animate-button [inTiming]="700" [clickColor]="'green'" style="height: 80px; width: 150px;">Click me</button>
     <div style="height: 100px;"></div>
   </div>
 

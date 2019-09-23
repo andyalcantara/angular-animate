@@ -6,7 +6,7 @@ import {AnimationBuilder, animate, style, keyframes } from '@angular/animations'
 })
 export class MouseEnterDirective {
 
-  @Input() color = 'blue';
+  @Input() enterColor = 'blue';
   @Input() inTiming = 400;
   @Input() outTiming = 400;
 
@@ -29,7 +29,7 @@ export class MouseEnterDirective {
 
     circle.id = 'circle';
     circle.style.position = 'absolute';
-    circle.style.backgroundColor = this.color;
+    circle.style.backgroundColor = this.enterColor;
     circle.style.overflow = 'hidden';
     circle.style.borderRadius = '100%';
     circle.style.width = '1px';
