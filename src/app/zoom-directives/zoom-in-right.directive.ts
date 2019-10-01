@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, keyframes, style} from '@angular/animations';
 })
 export class ZoomInRightDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() zoomInRightDelay = 0;
+  @Input() zoomInRightRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -34,13 +34,13 @@ export class ZoomInRightDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.zoomInRightDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.zoomInRightRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.zoomInRightDelay);
       }
     });
   }
