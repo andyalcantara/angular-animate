@@ -6,8 +6,8 @@ import { AnimationBuilder, animate, style, keyframes } from '@angular/animations
 })
 export class RotateInDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() rotateInDelay = 0;
+  @Input() rotateInRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -29,13 +29,13 @@ export class RotateInDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.rotateInDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.rotateInRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.rotateInDelay);
       }
     });
   }

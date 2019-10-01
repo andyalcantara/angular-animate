@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class RotateInUpLeftDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() rotateInUpLeftDelay = 0;
+  @Input() rotateInUpLeftRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -30,13 +30,13 @@ export class RotateInUpLeftDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.rotateInUpLeftDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.rotateInUpLeftRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.rotateInUpLeftDelay);
       }
     });
   }
