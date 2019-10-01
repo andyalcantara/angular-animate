@@ -45,11 +45,12 @@ Examples:
 A circle with the color specified will expand from the position at which the mouse entered the element.
 It can be controlled the timing of the animation when it enters and the timing of the animation when leaves.
 ```html
-<div animMouseEnter [color]="'red'" [inTiming]="400" [outTiming]="500"></div>
+<div animMouseEnter [inTiming]="400" [outTiming]="500"></div>
 ```
 [animate-button] is the same animation as animMouseEnter but only available for buttons
 ```html
 <button animate-button [clickColor]="'purple'" [inTiming]="800">Click Me</button>
+<button animBounce [bounceDelay]="1000" [bounceRepeat]="2">Click me too</button>
 ```
 ![animate-button](animate-button.gif)
 Work in progress!!! New animations and features coming soon!
