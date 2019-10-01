@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class FadeInDownBigDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() fadeInDownBigDelay = 0;
+  @Input() fadeInDownBigRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -25,17 +25,18 @@ export class FadeInDownBigDirective implements OnInit {
         transform: 'translateY(0)'
       })),
     ]);
+
     const player = directiveAnimation.create(this.element.nativeElement);
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.fadeInDownBigDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.fadeInDownBigRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.fadeInDownBigDelay);
       }
     });
   }
