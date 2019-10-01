@@ -30,7 +30,8 @@ export class HingeDirective implements OnInit {
         transform: 'rotate(50deg)'
       })),
       animate('400ms ease-out', style({
-        transform: 'translateY(500px) translateX(20px)'
+        transform: 'translateY(500px) translateX(20px)',
+        opacity: 0
       }))
     ]);
     const player = directiveAnimation.create(this.element.nativeElement);
