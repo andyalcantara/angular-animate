@@ -6,7 +6,7 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class ZoomOutUpDirective implements OnInit {
 
-  @Input() delay = 0;
+  @Input() zoomOutUpDelay = 0;
   @Input() repeat = 0;
 
   constructor(
@@ -33,13 +33,13 @@ export class ZoomOutUpDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.zoomOutUpDelay);
 
     player.onDone(() => {
       for (let i = 1; i < this.repeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.zoomOutUpDelay);
       }
     });
   }
