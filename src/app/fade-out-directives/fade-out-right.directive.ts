@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class FadeOutRightDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() fadeOutRightDelay = 0;
+  @Input() fadeOutRightRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -28,13 +28,13 @@ export class FadeOutRightDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.fadeOutRightDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.fadeOutRightRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.fadeOutRightDelay);
       }
     });
   }
