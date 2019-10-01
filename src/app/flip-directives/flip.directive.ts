@@ -6,8 +6,8 @@ import { AnimationBuilder, style, animate } from '@angular/animations';
 })
 export class FlipDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() flipDelay = 0;
+  @Input() flipRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -27,13 +27,13 @@ export class FlipDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.flipDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.flipRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.flipDelay);
       }
     });
   }

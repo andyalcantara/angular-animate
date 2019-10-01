@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class FlipOutYDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() flipOutYDelay = 0;
+  @Input() flipOutYRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -31,13 +31,13 @@ export class FlipOutYDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.flipOutYDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.flipOutYRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.flipOutYDelay);
       }
     });
   }

@@ -39,7 +39,7 @@ After this you are all set!!!
 Examples:
 
 ```html
-<h1 animFlip [delay]="200" [repeat]="2">Hello World</h1>
+<h1 animFlip [flipDelay]="200" [flipRepeat]="2">Hello World</h1>
 ```
 [animMouseEnter] is a different animation it is meant to signify that the mouse enter a certain area.
 A circle with the color specified will expand from the position at which the mouse entered the element.
