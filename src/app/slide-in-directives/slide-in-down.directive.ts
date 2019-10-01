@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style, keyframes} from '@angular/animations';
 })
 export class SlideInDownDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() slideInDownDelay = 0;
+  @Input() slideInDownRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -27,13 +27,13 @@ export class SlideInDownDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.slideInDownDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.slideInDownRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.slideInDownDelay);
       }
     });
   }

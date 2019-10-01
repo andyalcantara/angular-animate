@@ -6,8 +6,8 @@ import {animate, AnimationBuilder, style} from '@angular/animations';
 })
 export class SlideInRightDirective implements OnInit {
 
-  @Input() delay = 0;
-  @Input() repeat = 0;
+  @Input() slideInRightDelay = 0;
+  @Input() slideInRightRepeat = 0;
 
   constructor(
     private animationBuilder: AnimationBuilder,
@@ -27,13 +27,13 @@ export class SlideInRightDirective implements OnInit {
 
     setTimeout(() => {
       player.play();
-    }, this.delay);
+    }, this.slideInRightDelay);
 
     player.onDone(() => {
-      for (let i = 1; i < this.repeat; i++) {
+      for (let i = 1; i < this.slideInRightRepeat; i++) {
         setTimeout(() => {
           player.play();
-        }, i * this.delay);
+        }, i * this.slideInRightDelay);
       }
     });
   }
